@@ -1,0 +1,22 @@
+.bg_image {
+    @apply bg-[url('../../public/images/pattern-background-desktop-light.svg')] bg-cover bg-center bg-no-repeat min-h-screen;
+    
+    @media (max-width: 600px) {
+        background-image: url('../../public//images/pattern-background-mobile-light.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.quiz_ctn {
+    @apply flex justify-between max-w-[1160px] w-full;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        display: grid;
+        justify-content: center;
+        gap: 64px;
+        max-width: 640px;
+    }
+}
