@@ -9,14 +9,3 @@
     }
 }
 
-.quiz_ctn {
-    @apply flex justify-between max-w-[1160px] w-full;
-
-    @media (max-width: 1200px) {
-        flex-direction: column;
-        display: grid;
-        justify-content: center;
-        gap: 64px;
-        max-width: 640px;
-    }
-}

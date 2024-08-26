@@ -1,0 +1,50 @@
+.quiz_ctn {
+    @apply flex justify-between max-w-[1160px] w-full py-10;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        display: grid;
+        justify-content: center;
+        gap: 64px;
+        max-width: 640px;
+        padding: 40px 0;
+    }
+
+    @media (max-width: 600px) {
+        padding: 32px 24px;
+    }
+}
+
+.button {
+    @apply flex items-center gap-8 text-[28px] font-[500] p-5 rounded-[24px] shadow-custom bg-[#fff] w-full border-[3px] border-[#fff] outline-none;
+}
+
+.quizButton {
+    @apply flex items-center gap-8 text-[28px] font-[500] px-5 py-[18px] rounded-[24px] shadow-custom bg-[#fff] w-full border-[3px] border-[#fff] outline-none;
+}
+
+.svg, .quizSvg {
+    @apply rounded-[8px] p-1 max-w-12 w-full;
+}
+
+.button:hover .quizSvg {
+    color: #fff;
+}
+
+.quizButton:hover,
+.quizButton:active {
+    border: 3px solid #A729F5;
+    transition: 0.2s ease
+}
+
+.questions_ctn {
+    @apply grid grid-cols-2 w-full;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 64px;
+        max-width: 640px;
+        width: 100%;
+    }
+}
