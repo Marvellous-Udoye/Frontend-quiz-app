@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({ text, svg, svgBgColor, onClick }) => {
       onClick={onClick}
       className={styles.button}>
       <div
-        className={`${styles.svg}`}
+        className={styles.svg}
         style={{ backgroundColor: svgBgColor }}
       >
         {svg}

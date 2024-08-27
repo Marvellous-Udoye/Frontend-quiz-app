@@ -1,17 +1,43 @@
 .quiz_ctn {
-    @apply flex justify-between max-w-[1160px] w-full py-10;
+    @apply flex flex-col justify-between max-w-[1160px] w-full py-6;
+
+    @media (min-width: 1201px) {
+        gap: 64px;
+    }
 
     @media (max-width: 1200px) {
         flex-direction: column;
         display: grid;
         justify-content: center;
-        gap: 64px;
+        gap: 49px;
         max-width: 640px;
-        padding: 40px 0;
     }
 
     @media (max-width: 600px) {
-        padding: 32px 24px;
+        padding: 0;
+        gap: 32px;
+    }
+
+}
+
+.home_quiz_ctn {
+    @apply flex justify-between py-6;
+
+    @media (min-width: 1201px) {
+        gap: 64px;
+    }
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        display: grid;
+        justify-content: center;
+        gap: 49px;
+        max-width: 640px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 24px;
+        gap: 32px;
     }
 }
 
@@ -23,7 +49,8 @@
     @apply flex items-center gap-8 text-[28px] font-[500] px-5 py-[18px] rounded-[24px] shadow-custom bg-[#fff] w-full border-[3px] border-[#fff] outline-none;
 }
 
-.svg, .quizSvg {
+.svg,
+.quizSvg {
     @apply rounded-[8px] p-1 max-w-12 w-full;
 }
 
@@ -46,5 +73,90 @@
         gap: 64px;
         max-width: 640px;
         width: 100%;
+    }
+
+    @media (max-width: 600px) {
+        padding: 0 24px;
+    }
+}
+
+.navbar {
+    @apply flex items-center justify-between text-[28px] font-[500] w-full;
+
+    @media (max-width: 600px) {
+        padding: 16px 24px;
+        font-size: 18px;
+    }
+}
+
+.navbar .svg {
+    @media (max-width: 600px) {
+        transform: scale(.7);
+    }
+}
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #A729F5;
+    border: 1px solid #A729F5;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.27em;
+    bottom: 0.25em;
+    background-color: #fff;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #A729F5;
+    border: 1px solid #A729F5;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #A729F5;
+}
+
+input:checked+.slider:before {
+    transform: translateX(1.4em);
+    background-color: #fff;
+}
+
+.dark_bg {
+    @apply bg-[url('../../public/images/pattern-background-desktop-dark.svg')] bg-cover bg-center bg-no-repeat min-h-screen bg-[#000];
+
+    @media (max-width: 600px) {
+        background-image: url('../../public//images/pattern-background-mobile-dark.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 }

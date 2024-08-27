@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import styles from './global.module.css'
+import styles from './global.module.css';
+import { DarkModeProvider, useDarkMode } from "@/contexts/DarkMode";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -15,9 +16,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const darkMode = (false)
+
   return (
     <html lang="en">
-      <body className={`${rubik.className} ${styles.bg_image}`}>{children}</body>
+      <head>
+        <link rel="icon" href="/fav.ico" />
+      </head>
+      <body className={`${rubik.className} ${styles.bg_image} ${darkMode ? styles['dark_bg'] : ''} `}>
+        <DarkModeProvider>
+          {children}
+        </DarkModeProvider>
+        </body>
     </html>
   );
 }

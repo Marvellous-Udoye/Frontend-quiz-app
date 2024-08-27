@@ -9,3 +9,13 @@
     }
 }
 
+.dark_bg {
+    @apply bg-[url('../../public/images/pattern-background-desktop-dark.svg')] bg-cover bg-center bg-no-repeat min-h-screen bg-[#000];
+    
+    @media (max-width: 600px) {
+        background-image: url('../../public//images/pattern-background-mobile-dark.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
