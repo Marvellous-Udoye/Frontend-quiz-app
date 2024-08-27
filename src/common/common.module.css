@@ -1,5 +1,5 @@
 .quiz_ctn {
-    @apply flex flex-col justify-between max-w-[1160px] w-full py-6;
+    @apply flex flex-col justify-between items-center w-full py-6 mx-auto;
 
     @media (min-width: 1201px) {
         gap: 64px;
@@ -37,7 +37,7 @@
 
     @media (max-width: 600px) {
         padding: 24px;
-        gap: 32px;
+        gap: 40px;
     }
 }
 
@@ -85,13 +85,6 @@
 
     @media (max-width: 600px) {
         padding: 16px 24px;
-        font-size: 18px;
-    }
-}
-
-.navbar .svg {
-    @media (max-width: 600px) {
-        transform: scale(.7);
     }
 }
 
@@ -101,6 +94,7 @@
     display: inline-block;
     width: 3.5em;
     height: 2em;
+    margin: 0 16px;
 }
 
 /* Hide default HTML checkbox */
@@ -160,3 +154,49 @@ input:checked+.slider:before {
         background-position: center;
     }
 }
+
+.progress_bar::before {
+    content: '';
+    background-color: #A729F5;
+    border-radius: 10px;
+    height: 8px;
+    padding: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+/* From Uiverse.io by satyamchaudharydev */ 
+.loader {
+    display: block;
+    --height-of-loader: 4px;
+    --loader-color: #0071e2;
+    width: 130px;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+  }
+  
+  .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+    ;
+  }
+  
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+  
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
