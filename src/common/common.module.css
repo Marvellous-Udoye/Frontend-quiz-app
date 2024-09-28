@@ -1,6 +1,4 @@
 .quiz_ctn {
-    @apply flex flex-col justify-between items-center w-full py-6 mx-auto;
-
     @media (min-width: 1201px) {
         gap: 64px;
     }
@@ -21,7 +19,7 @@
 }
 
 .home_quiz_ctn {
-    @apply flex justify-between py-6;
+    @apply flex justify-between py-6 max-w-[564px];
 
     @media (min-width: 1201px) {
         gap: 64px;
@@ -42,7 +40,7 @@
 }
 
 .button {
-    @apply flex items-center gap-8 text-[28px] font-[500] p-5 rounded-[24px] shadow-custom bg-[#fff] w-full border-[3px] border-[#fff] outline-none;
+    @apply flex items-center gap-8 text-[28px] font-[500] p-5 rounded-[24px] shadow-custom bg-[#fff] w-full border-[3px] border-[#fff] outline-none w-full md:w-[564px];
 }
 
 .quizButton {
@@ -65,7 +63,7 @@
 }
 
 .questions_ctn {
-    @apply grid grid-cols-2 w-full;
+    @apply grid grid-cols-2 w-full mt-8;
 
     @media (max-width: 1200px) {
         grid-template-columns: 1fr;
@@ -77,11 +75,12 @@
 
     @media (max-width: 600px) {
         padding: 0 24px;
+        gap: 0;
     }
 }
 
 .navbar {
-    @apply flex items-center justify-between text-[28px] font-[500] w-full;
+    @apply flex items-center justify-between text-base sm:text-[28px] font-[500] w-full;
 
     @media (max-width: 600px) {
         padding: 16px 24px;
@@ -164,7 +163,7 @@ input:checked+.slider:before {
     transition: width 0.3s ease-in-out;
 }
 
-/* From Uiverse.io by satyamchaudharydev */ 
+/* From Uiverse.io by satyamchaudharydev */
 .loader {
     display: block;
     --height-of-loader: 4px;
@@ -172,11 +171,11 @@ input:checked+.slider:before {
     width: 130px;
     height: var(--height-of-loader);
     border-radius: 30px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     position: relative;
-  }
-  
-  .loader::before {
+}
+
+.loader::before {
     content: "";
     position: absolute;
     background: var(--loader-color);
@@ -187,16 +186,16 @@ input:checked+.slider:before {
     border-radius: 30px;
     animation: moving 1s ease-in-out infinite;
     ;
-  }
-  
-  @keyframes moving {
+}
+
+@keyframes moving {
     50% {
-      width: 100%;
+        width: 100%;
     }
-  
+
     100% {
-      width: 0;
-      right: 0;
-      left: unset;
+        width: 0;
+        right: 0;
+        left: unset;
     }
-  }
+}
