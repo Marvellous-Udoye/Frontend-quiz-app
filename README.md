@@ -1,5 +1,5 @@
 # Frontend Quiz App
-The goal of this project was to build a quiz application that closely adheres to the provided design while offering a seamless user experience. The app allows users to select quizzes on various subjects and answer multiple-choice questions. After answering, users can view their results and move on to the next question.
+The goal of this project was to build a quiz application that features dynamic quizzes with user-friendly interactivity and provides an engaging experience across devices. The app allows users to select quizzes that requires knowledge of HTML, CSS, JavaScript and Accessibility and answer multiple-choice questions. After answering, users can view their results and move on to the next question.
 
 # Features 
 Users can:
