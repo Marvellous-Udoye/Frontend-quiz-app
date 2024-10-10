@@ -15,7 +15,7 @@ Users can:
 - Navigate the app using only the keyboard
 - Toggle between light and dark themes for a better user experience
 
-Technologies Used
+# Technologies Used
 - Next.js: For server-side rendering and static site generation.
 - Tailwind CSS: For utility-first, responsive design.
 - TypeScript: To add static types, ensuring type safety and reducing bugs.
